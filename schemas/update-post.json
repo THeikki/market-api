@@ -1,0 +1,180 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "Title": "Sell",
+            "Explanation": "Sell Apple laptop",
+            "Category": "Computers",
+            "Location": "Denmark",
+            "ItemPic1": "item1.jpeg",
+            "ItemPic2": "item2.jpeg",
+            "ItemPic3": "item3.jpeg",
+            "ItemPic4": "item4.jpeg",
+            "Price": 800,
+            "DateOfPosting": "2019-08-24",
+            "DeliveryMethod": "Pickup",
+            "SellerName": "Iines Ankka",
+            "SellerAddress": "Ankkalinna 245"
+        }
+    ],
+    "required": [
+        "Title",
+        "Explanation",
+        "Category",
+        "Location",
+        "Price",
+        "DateOfPosting",
+        "DeliveryMethod",
+        "SellerName",
+        "SellerAddress"
+    ],
+    "properties": {
+        "Title": {
+            "$id": "#/properties/Title",
+            "type": "string",
+            "minLength": 4,
+            "title": "The Title schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Sell"
+            ]
+        },
+        "Explanation": {
+            "$id": "#/properties/Explanation",
+            "type": "string",
+            "minLength": 5,
+            "title": "The Explanation schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Sell Apple laptop"
+            ]
+        },
+        "Category": {
+            "$id": "#/properties/Category",
+            "type": "string",
+            "minLength": 5,
+            "title": "The Category schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Computers"
+            ]
+        },
+        "Location": {
+            "$id": "#/properties/Location",
+            "type": "string",
+            "minLength": 3,
+            "title": "The Location schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Denmark"
+            ]
+        },
+        "ItemPic1": {
+            "$id": "#/properties/ItemPic1",
+            "type": "string",
+            "title": "The ItemPic1 schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "item1.jpeg"
+            ]
+        },
+        "ItemPic2": {
+            "$id": "#/properties/ItemPic2",
+            "type": "string",
+            "title": "The ItemPic2 schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "item2.jpeg"
+            ]
+        },
+        "ItemPic3": {
+            "$id": "#/properties/ItemPic3",
+            "type": "string",
+            "title": "The ItemPic3 schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "item3.jpeg"
+            ]
+        },
+        "ItemPic4": {
+            "$id": "#/properties/ItemPic4",
+            "type": "string",
+            "title": "The ItemPic4 schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "item4.jpeg"
+            ]
+        },
+        "Price": {
+            "$id": "#/properties/Price",
+            "type": "integer",
+            "title": "The Price schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                800
+            ]
+        },
+        "DateOfPosting": {
+            "$id": "#/properties/DateOfPosting",
+            "type": "string",
+            "title": "The DateOfPosting schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2019-08-24"
+            ]
+        },
+        "DeliveryMethod": {
+            "$id": "#/properties/DeliveryMethod",
+            "type": "string",
+            "title": "The DeliveryMethod schema",
+            "description": "An explanation about the purpose of this instance.",
+            "enum": [
+                "Pickup",
+                "pickup",
+                "Shipping",
+                "shipping"
+             ],
+            "examples": [
+                "Pickup"
+            ]
+        },
+        "SellerName": {
+            "$id": "#/properties/SellerName",
+            "type": "string",
+            "minLength": 3,
+            "title": "The SellerName schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Iines Ankka"
+            ]
+        },
+        "SellerAddress": {
+            "$id": "#/properties/SellerAddress",
+            "type": "string",
+            "minLength": 3,
+            "title": "The SellerAddress schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Ankkalinna 245"
+            ]
+        }
+    },
+    "additionalProperties": false
+}
