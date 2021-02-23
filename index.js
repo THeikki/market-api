@@ -14,6 +14,11 @@ app.use('/postings', postingRoute);
 app.use('/user', userRoute);
 app.use('/uploads', imageRoute);
 
+
+app.get('/', (req,res) => {
+    res.send("Hello World");
+});
+
 /*
 *** Start server
 */
