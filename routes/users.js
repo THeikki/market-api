@@ -56,18 +56,17 @@ router.post('/login', validate.validateUser,(req, res) => {
                     jwt.sign({
                         username: req.body.UserName,
                         }, process.env.JWT_TOKEN, function(err, token) {                    
-                        res.status(200).json({
+                        return res.status(200).json({
                             Message: "Login successful",
                             Token: token,
                         });
                     });      
                 } else {
-                    res.status(401).json({Message:"Invalid password"});
-                    console.log(err);
+                    return res.status(401).json({Message:"Invalid password"});
                 }
                 });
             } else {
-                    res.status(404).json({Message:"Not found" });
+                    return res.status(404).json({Message:"Not found" });
             }            
         });
     });
