@@ -14,13 +14,13 @@ app.use('/postings', postingRoute);
 app.use('/user', userRoute);
 app.use('/uploads', imageRoute);
 
-
+/*
 app.get('/', (req,res) => {
     res.sendFile('index.html', {root: __dirname});
 });
-
+*/
 app.get('/', (req,res) => {
-    res.sendFile('open_api.html', {root: __dirname});
+    res.sendFile('../openAPI_documents/open_api.html', {root: __dirname});
 });
 /*
 *** Start server
