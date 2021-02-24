@@ -88,6 +88,7 @@ router.post('/',cAuth.checkAuth, validate.validatePost,(req, res) => {
                 res.status(201).json({Message:"New posting created"});
             } else {
                 res.status(400).json({Message:"Something went south"});
+                console.log(err);
             }
         });      
     });
