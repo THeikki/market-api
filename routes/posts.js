@@ -84,7 +84,11 @@ router.post('/',cAuth.checkAuth, validate.validatePost,(req, res) => {
         const params = req.body;
         connection.query('INSERT INTO posts SET ?', params, (err, rows) => {
             connection.release() ;  
-            res.status(201).json({Message:"New posting created"});
+            if(!err) {
+                res.status(201).json({Message:"New posting created"});
+            } else {
+                res.status(400).json({Message:"Something went south"});
+            }
         });      
     });
 });
