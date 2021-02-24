@@ -20,7 +20,7 @@ app.get('/', (req,res) => {
 });
 */
 app.get('/', (req,res) => {
-    res.sendFile('open_api.html');
+    res.sendFile('open_api.html', {root: __dirname});
 });
 /*
 *** Start server
