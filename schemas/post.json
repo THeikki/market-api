@@ -32,7 +32,7 @@
         "ItemPic3",
         "ItemPic4",
         "Price",
-        
+        "DateOfPosting",
         "DeliveryMethod",
         "SellerName",
         "SellerAddress"
