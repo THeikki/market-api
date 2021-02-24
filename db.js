@@ -6,10 +6,10 @@ const mysql = require('mysql');
 */
 const pool = mysql.createPool({
     connectionLimit: 10,
-    host: 'mysli.oamk.fi',
+    host: 'db4free.net',
     user: 't9tohe00',
     password: process.env.MYSQL_PASSWORD,
-    database: 'opisk_t9tohe00'
+    database: 'oamk_opiskelija'
 });
 
 module.exports = pool;
