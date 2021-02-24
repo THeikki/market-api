@@ -16,7 +16,7 @@ app.use('/uploads', imageRoute);
 
 
 app.get('/', (req,res) => {
-    res.send("Hello World");
+    res.sendFile('index.html', {root: __dirname});
 });
 
 /*
