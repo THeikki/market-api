@@ -19,6 +19,9 @@ app.get('/', (req,res) => {
     res.sendFile('index.html', {root: __dirname});
 });
 
+app.get('/', (req,res) => {
+    res.sendFile('open_api.html', {root: __dirname});
+});
 /*
 *** Start server
 */
