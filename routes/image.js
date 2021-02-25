@@ -28,8 +28,8 @@ const upload = multer({ storage: storage, fileFilter: fileFilter, cAuth: cAuth }
 router.post('/', function(req, res) {
     const pics = req.files;  
     upload(req, res, function (err) {
-        if (err || !pics) {
-          return res.status(400).json({Message: 'Something went wrong'});
+        if (err || !pics || pics == '') {
+          res.status(400).json({Message: 'Something went wrong'});
        } else {
            res.status(200).json({Message:"Uploaded successfully"})
        }
