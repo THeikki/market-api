@@ -23,11 +23,11 @@ const fileFilter = (req, file, cb) => {
 /*
 *** Upload pictures to server
 */
-router.post('/',cAuth.checkAuth, (req, res) => {
+router.post('/', (req, res) => {
     const pics = req.files;  
     const upload = multer({ storage: storage, fileFilter: fileFilter }).array('image', 4);
 
-    upload(req, res, function (err) {
+    upload(req, res, cAuth.checkAuth, function (err) {
         if (!err && pics != '') {
             res.status(200).json({Message: 'Uploaded successfully'});
         } else {
