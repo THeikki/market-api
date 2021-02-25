@@ -20,12 +20,12 @@ const fileFilter = (req, file, cb) => {
     }
 }
 
-const upload = multer({ storage: storage, fileFilter: fileFilter, cAuth: cAuth }).array('image', 4);
+const upload = multer({ storage: storage, fileFilter: fileFilter }).array('image', 4);
 
 /*
 *** Upload pictures
 */
-router.post('/', function(req, res) {
+router.post('/',cAuth.checkAuth, function(req, res) {
     const pics = req.files;  
     upload(req, res, function (err) {
         if (err || !pics || pics == '') {
