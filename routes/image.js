@@ -23,7 +23,7 @@ const fileFilter = (req, file, cb) => {
 const upload = multer({ storage: storage, fileFilter: fileFilter });
 
 /*
-*** Upload pictures
+*** Upload pictures on server
 */
 router.post('/', upload.array('image', 4), cAuth.checkAuth, (req, res) => {
     const pics = req.files;  
