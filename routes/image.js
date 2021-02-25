@@ -20,18 +20,20 @@ const fileFilter = (req, file, cb) => {
     }
 }
 
-const upload = multer({ storage: storage, fileFilter: fileFilter });
-
 /*
 *** Upload pictures to server
 */
-router.post('/',cAuth.checkAuth, upload.array('image', 4), (req, res) => {
+router.post('/',cAuth.checkAuth, (req, res) => {
     const pics = req.files;  
-    if (!pics || pics == '') {
-        res.status(400).json({Message: 'Something went wrong'});
-    } else {
-        res.status(200).json({Message: 'Uploaded successfully'});
-    } 
+    const upload = multer({ storage: storage, fileFilter: fileFilter }).array('image', 4);
+
+    upload(req, res, function (err) {
+        if (!err && pics != '') {
+            res.status(200).json({Message: 'Uploaded successfully'});
+        } else {
+            res.status(400).json({Message: 'Something went wrong'});
+        }
+    });
 });
 
 /*
