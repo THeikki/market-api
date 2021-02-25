@@ -27,8 +27,7 @@ const upload = multer({ storage: storage, fileFilter: fileFilter });
 */
 router.post('/',cAuth.checkAuth, upload.array('image', 4), (req, res) => {
     const pics = req.files;  
-    const valid = cAuth
-    Boolean(valid);
+    Boolean(valid) = cAuth.checkAuth;
     if (!valid || !pics || pics == '') {
         res.status(400).json({Message: 'Something went wrong'});
     } else {
