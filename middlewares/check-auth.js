@@ -9,7 +9,7 @@ function checkAuth(req, res, next) {
         const token = req.headers.authorization.split(" ")[1];
         const decodedToken = jwt.verify(token, process.env.JWT_TOKEN);
         req.userData = decodedToken;
-        return next();
+        next();
     } catch (error) {
         return res.status(401).json({Message:'Unauthorized'});     
     }
