@@ -28,9 +28,9 @@ const upload = multer({ storage: storage, fileFilter: fileFilter });
 router.post('/',cAuth.checkAuth, upload.array('image', 4), (req, res) => {
     const pics = req.files;  
     if (!pics) {
-        return res.status(400).json({Message: 'Something went wrong'});
+        res.status(400).json({Message: 'Something went wrong'});
     } else {
-        return res.status(200).json({Message: 'Uploaded successfully'});
+        res.status(200).json({Message: 'Uploaded successfully'});
     } 
 });
 
@@ -40,7 +40,7 @@ router.post('/',cAuth.checkAuth, upload.array('image', 4), (req, res) => {
 router.get('/images/:Image', (req,res) => {
     const pic = req.file;
     if(!pic) {
-        return res.status(404).json({Message:"Not found"})
+        res.status(404).json({Message:"Not found"})
     }
 
 });
