@@ -54,6 +54,7 @@ router.post('/login', validate.validateUser,(req, res) => {
                 bcrypt.compare(password, rows[0].Pwd, function(err, result) {
                 if(result) {
                     jwt.sign({
+                        expiresIn: '1h',
                         username: req.body.UserName,
                         }, process.env.JWT_TOKEN, function(err, token) {                    
                         return res.status(200).json({
