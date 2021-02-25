@@ -299,6 +299,9 @@
           },
           "400": {
             "description": "Something went wrong"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
