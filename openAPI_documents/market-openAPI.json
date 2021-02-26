@@ -78,9 +78,6 @@
           },
           "404": {
             "description": "Not Found"
-          },
-          "": {
-            "description": "Psoting with id: [] updated"
           }
         }
       },
