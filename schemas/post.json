@@ -31,6 +31,7 @@
         "ItemPic2",
         "ItemPic3",
         "ItemPic4",
+        "DateOfPosting",
         "Price",
         "DeliveryMethod",
         "SellerName",

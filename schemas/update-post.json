@@ -28,6 +28,7 @@
         "Category",
         "Location",
         "Price",
+        "DateOfPosting",
         "DeliveryMethod",
         "SellerName",
         "SellerAddress"
