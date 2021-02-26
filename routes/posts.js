@@ -47,7 +47,7 @@ router.get('/location/:Location', (req, res) => {
 router.get('/date/:DateOfPosting', (req, res) => {
     conn.getConnection((err, connection) => {
         if(err) throw err;
-        connection.query('SELECT * FROM posts WHERE DateOfPosting = ? LIKE YYYY-MM-DD', [req.params.DateOfPosting], (err, rows) => {
+        connection.query('SELECT * FROM posts WHERE DateOfPosting = ?', [req.params.DateOfPosting], (err, rows) => {
             connection.release();
             if(!err && rows != "") {
                 res.status(200).json(rows);
