@@ -347,7 +347,6 @@
         "title": "Post",
         "required": [
           "Category",
-          "DateOfPosting",
           "DeliveryMethod",
           "Explanation",
           "Location",
@@ -412,7 +411,8 @@
           },
           "DateOfPosting": {
             "type": "string",
-            "format": "date"
+            "format": "date",
+            "readOnly": true
           },
           "DeliveryMethod": {
             "type": "string",
