@@ -701,49 +701,31 @@
       
             <div class="param-desc"><span class="param-type">Path Parameter</span> &mdash;  </div>    </div>  <!-- field-items -->
 
-
-
-
-
-
-    <h3 class="field-label">Return type</h3>
-    <div class="return-type">
-      <a href="#Posting">Posting</a>
-      
-    </div>
-
-    <!--Todo: process Response Object and its headers, schema, examples -->
-
-    <h3 class="field-label">Example data</h3>
-    <div class="example-data-content-type">Content-Type: application/json</div>
-    <pre class="example"><code>{
-  "Category" : "Category",
-  "DeliveryMethod" : "Pickup",
-  "Explanation" : "Explanation",
-  "DateOfPosting" : "2000-01-23",
-  "Title" : "Title",
-  "SellerAddress" : "SellerAddress",
-  "ItemPic1" : "item.png",
-  "ItemPic2" : "item.png",
-  "ItemPic3" : "item.png",
-  "ItemPic4" : "item.png",
-  "Price" : 6,
-  "id" : 1.0800828190461012,
-  "SellerName" : "SellerName",
-  "Location" : "Location"
-}</code></pre>
-
-    <h3 class="field-label">Produces</h3>
-    This API call produces the following media types according to the <span class="header">Accept</span> request header;
-    the media type will be conveyed by the <span class="header">Content-Type</span> response header.
+    <h3 class="field-label">Consumes</h3>
+    This API call consumes the following media types via the <span class="header">Content-Type</span> request header:
     <ul>
       <li><code>application/json</code></li>
     </ul>
 
+    <h3 class="field-label">Request body</h3>
+    <div class="field-items">
+      <div class="param">body <a href="#Posting">Posting</a> (optional)</div>
+      
+            <div class="param-desc"><span class="param-type">Body Parameter</span> &mdash;  </div>
+                </div>  <!-- field-items -->
+
+
+
+
+
+    <!--Todo: process Response Object and its headers, schema, examples -->
+
+
+
     <h3 class="field-label">Responses</h3>
     <h4 class="field-label">200</h4>
-    Posting updated!
-        <a href="#Posting">Posting</a>
+    Posting updated
+        <a href="#"></a>
     <h4 class="field-label">400</h4>
     validate:errors
         <a href="#"></a>
