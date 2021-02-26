@@ -35,7 +35,7 @@ router.post('/', upload.array('image', 4), cAuth.checkAuth, (req, res) => {
 });
 
 /*
-*** Get picture by name
+*** Get picture by given name
 */
 router.get('/images/:Image', (req,res) => {
     const pic = req.file;
