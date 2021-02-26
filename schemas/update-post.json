@@ -22,17 +22,6 @@
             "SellerAddress": "Ankkalinna 245"
         }
     ],
-    "required": [
-        "Title",
-        "Explanation",
-        "Category",
-        "Location",
-        "Price",
-        "DateOfPosting",
-        "DeliveryMethod",
-        "SellerName",
-        "SellerAddress"
-    ],
     "properties": {
         "Title": {
             "$id": "#/properties/Title",
